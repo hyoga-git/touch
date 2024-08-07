@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ランキング一覧</title>
+    
+    <link rel="stylesheet" href="ranking.css">
+</head>
+<body>
+    <div class="header"><a href="/">戻る</a></div>
+
+
+    <div class="ranking">
+        <h3 class="itiran">ランキング一覧</h3>
+    <% for (let i = 0; i < Math.min(touch.length,10000000); i++) { %>
+        <% const rank = touch[i]; %>
+        <div class="ranking">
+            <span class="border"><%= i + 1 %>位:</span>
+            <span class="name"><%= rank.name %></span>
+            <span class="time"><%= rank.time %></span>
+        </div>
+            <% } %>
+
+</body>
+</html>
