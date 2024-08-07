@@ -128,3 +128,32 @@ function gameStart() {
     number();
     timeSet();
 }
+
+const burger = document.querySelector(".burger");
+const nav = document.querySelector(".nav-links");
+const navLinks = document.querySelectorAll(".nav-links li");
+const navheader = document.querySelector(".nav-header");
+
+
+burger.addEventListener("click", () => {
+    console.log("クラスを付与します");
+    nav.classList.toggle("nav-active");
+
+    navLinks.forEach((link, index) => {
+        if (link.style.animation) {
+            link.style.animation = "";
+        } else {
+            link.style.animation = `navLinksFade 1.5s ease forwards ${index / 4}s`;
+        }
+    });
+    burger.classList.toggle("toggle")
+});
+
+window.addEventListener('scroll', () => {
+    console.log(1)
+    if(window.pageYOffset >= navheader.offsetTop){
+        navheader.classList.add("sticky");
+    }else{
+        navheader.classList.remove("sticky");
+    }
+});

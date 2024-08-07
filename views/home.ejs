@@ -9,27 +9,42 @@
 </head>
 <body>
     <header>
-
+        
+        <nav class="nav-header">
+                <div class="logo">
+                   <h3><a href="">早押し数字ゲーム</a></h3>
+                    <ul class="nav-links">
+                        <li><a href="/">TOP</a></li>
+                        <li><a href="/views/game.ejs">GAME</a></li>
+                        <li><a href="/views/ranking.ejs">RANKING</a></li>  
+                    </ul>
+                
+                
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+        </nav>
+    
     </header>
 
     <main>
-<section class="detail-container">
+        <section class="detail-container">
         <h1>早押し数字ゲーム</h1>
         <p>ルールは1〜9を順番に押すだけの簡単なゲームです。</p>
         <p>ランキングに反映されるので一位を目指してください。</p>
     
 
-    <div class="detail-flex">
+        <div class="detail-flex">
         <ul>
-        <a href="/game"><li>ゲームを開始する</li></a>
+        <a href="/game"><li>早押しを開始する</li></a>
         <a href="/ranking"><li>ランキング一覧</li></a>
         </ul>
     </div>
 </section>
-    </main>
+</main>
 
-    <footer></footer>
-
-    
+    <script src="game.js"></script>
 </body>
 </html>
