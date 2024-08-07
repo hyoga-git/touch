@@ -107,11 +107,8 @@ function StopTime() {
     time.remove();
 
     end.innerHTML = '<a href="/">終了</a>';
-    
     once.innerHTML='<a href="/touch">もう一度行う</a>'
-    
     score.innerHTML = `${playerName}さんのスコアは<br>${record}です!`
-    ranking.innerHTML='<a href="/ranking">順位を確認する</a>'
 
 
 
