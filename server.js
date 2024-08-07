@@ -18,7 +18,6 @@ app.get("/",(req,res)=>{
 })
 
 app.get("/game",(req,res)=>{
-    res.render("game.ejs")
     console.log("反射神経のゲーム起動中")
     
     pool.query(
