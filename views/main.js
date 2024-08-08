@@ -99,7 +99,7 @@ function StopTime() {
     .catch(error => {
         console.error(error);
     });
-    const table=document.querySelector('.table');
+    const table=document.querySelector('.game-table');
     const end=document.querySelector('.end');
     const score=document.querySelector('.score');
     const once=document.querySelector('.once');
