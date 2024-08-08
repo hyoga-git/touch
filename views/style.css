@@ -238,6 +238,9 @@
     .burger {
         display: block;
     }
+    .sticky{
+      position:fixed;
+      }
   
     .nav-active li {
         opacity:1;
