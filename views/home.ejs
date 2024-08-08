@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>簡易自作WEBAPP</title>
-    <link rel="stylesheet" href="home.css">
+    <title>早押しゲーム</title>
+    <!-- slickのCSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
+    <link rel="stylesheet" href="./style.css">
     
 </head>
 <body>
+
     <header>
         
         <nav class="nav-header">
                 <div class="logo">
-                   <h3><a href="">早押し数字ゲーム</a></h3>
+                   <h3><a href="">早押しゲーム</a></h3>
                     <ul class="nav-links">
-                        <li><a href="/">TOP</a></li>
-                        <li><a href="/views/game.ejs">GAME</a></li>
-                        <li><a href="/views/ranking.ejs">RANKING</a></li>  
+                        <li><a href="#">TOP</a></li>
+                        <li><a href="/game">GAMESTART</a></li>
+                        <li><a href="./ranking">RANKING</a></li>
                     </ul>
                 
                 
@@ -26,25 +30,41 @@
                     <div class="line3"></div>
                 </div>
         </nav>
+        
+       
     
     </header>
 
-    <main>
-        <section class="detail-container">
-        <h1>早押し数字ゲーム</h1>
-        <p>ルールは1〜9を順番に押すだけの簡単なゲームです。</p>
-        <p>ランキングに反映されるので一位を目指してください。</p>
-    
+<main>
 
-        <div class="detail-flex">
-        <ul>
-        <a href="/game"><li>早押しを開始する</li></a>
-        <a href="/ranking"><li>ランキング一覧</li></a>
-        </ul>
-    </div>
-</section>
+    <section class="game-detail">
+        <h2>早押しゲーム</h2>
+        <div class="game-detail-container">
+            <h3>ルール説明</h3>
+            <p>1~9を順番通りに押して行ってください。</p>
+            <p>ランキングに掲載されるので一位を目指してみてください。</p>
+        </div>
+        <div class="game-come">
+            <a href="/game"><p>ゲームを開始する</p></a>
+            <a href="/ranking"><p>ランキングを表示する</p></a>
+        </div>
+
+    </section>
+
+
+
 </main>
 
-    <script src="game.js"></script>
+<footer>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+<!-- slickのJavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="./main.js"></script>
+
+
 </body>
+
 </html>

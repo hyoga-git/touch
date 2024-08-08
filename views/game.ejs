@@ -1,37 +1,40 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>反射神経</title>
-    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="style.css">
  
 </head>
 <body>
-  <header>
+    <header>
         
-    <nav class="nav-header">
-            <div class="logo">
-               <h3><a href="">早押し数字ゲーム</a></h3>
-                <ul class="nav-links">
-                    <li><a href="/">TOP</a></li>
-                    <li><a href="/game">GAME</a></li>
-                    <li><a href="/ranking">RANKING</a></li>  
-                </ul>
-            
-            
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-    </nav>
-
-</header>
+        <nav class="nav-header">
+                <div class="logo">
+                   <h3><a href="">早押しゲーム</a></h3>
+                    <ul class="nav-links">
+                        <li><a href="#">TOP</a></li>
+                        <li><a href=".#artist">GAMESTART</a></li>
+                        <li><a href=".#timetable">RANKING</a></li>
+                    </ul>
+                
+                
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+        </nav>
+        
+       
+    
+    </header>
     
   <main>
-    <table class="table">
-    
+
+    <table class="game-table">
     <tr>
     <td><button id="1"></button></td>
     <td><button id="2"></button></td>
@@ -51,6 +54,7 @@
     </tr>
 
     </table>
+
 <div id="time">00:00:00.000</div>
 
 
@@ -59,15 +63,10 @@
 </div>
 
 
-<div class="score"></div>
-<br>
-<div class="link-container">
-<div class="once"></div>
-<br>
-<div class="end"></div>
-</div>
+
 
 </main>
+<script src="main.js"></script>
 <script src="game.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
