@@ -98,7 +98,7 @@ li > a {
     padding: 30px;
 }
 
-.game-detail-container h3 {
+.game-detail-contaaviner h3 {
     text-decoration: underline;
 }
 
@@ -233,6 +233,8 @@ li > a {
     body {
         overflow-x: hidden;
         touch-action: pan-x pan-y;
+        width:80%;
+        margin:auto
     }
 
     /* ハンバーガーメニュー */
@@ -266,6 +268,10 @@ li > a {
     }
 
     /* game-detail-container */
+    .game-detail{
+        width:80%;
+        margin:auto;
+    }
     .game-come {
         flex-direction: column;
     }
