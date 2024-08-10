@@ -195,23 +195,26 @@ li > a {
 
 /* ranking-container */
 .ranking {
-    width:80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
   }
   
-  .ranking h3.itiran {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-    color: #333;
-  }
   
   .ranking .border {
     font-weight: bold;
     color: #333;
   }
-  
+  .ranking h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+
+  }
   .ranking .name, 
   .ranking .time {
     display: inline-block;
@@ -233,39 +236,10 @@ li > a {
     body {
         overflow-x: hidden;
         touch-action: pan-x pan-y;
-        width:80%;
-        margin:auto
     }
 
     /* ハンバーガーメニュー */
-    .logo > ul {
-        position:absolute;/* 修正: 固定位置に変更 */
-        right: 0;
-        height: 30vh;
-        top: 10vh;
-        background-color: rgb(88, 126, 180);
-        opacity: 0.8;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        transform: translateX(100%);
-        z-index: 3;
-        transition: transform 0.5s ease-in-out; /* 遷移を追加 */
-    }
-
-    .logo li {
-        opacity: 0;
-    }
-
-    .burger {
-        display: block;
-    }
-    
-
-    .nav-active li {
-        opacity: 1;
-        animation: navLinksFade 0.9s ease forwards;
-    }
+   
 
     /* game-detail-container */
     .game-detail{
