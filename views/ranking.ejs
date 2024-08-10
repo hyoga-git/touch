@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ランキング一覧</title>
-    
-    <link rel="stylesheet" href="ranking.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ランキング一覧</title>
+        <!-- slickのCSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
+        <link rel="stylesheet" href="./style.css">
+        
+    </head>
 <body>
     <header>
         
@@ -36,7 +39,7 @@
     <% for (let i = 0; i < Math.min(touch.length,10000000); i++) { %>
         <% const rank = touch[i]; %>
         <div class="ranking">
-            <span class="border"><%= i + 1 %>位:</span>
+            <span class="border"><%= i + 1 %>位</span>
             <span class="name"><%= rank.name %></span>
             <span class="time"><%= rank.time %></span>
         </div>
