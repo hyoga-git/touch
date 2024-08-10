@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: 1px solid black;
 }
 
 h2 {
@@ -194,9 +195,7 @@ li > a {
 
 /* ranking-container */
 .ranking {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
+    width:80%;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
