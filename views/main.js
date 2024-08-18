@@ -102,7 +102,9 @@ function StopTime() {
         playerName=prompt("再度名前を入力してください")
     }
 }
-
+    if(playerName==null){
+        playerName="ゲスト";
+    }
     
     console.log(`名前: ${playerName} レコード: ${record}`);
 
