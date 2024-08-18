@@ -89,11 +89,21 @@ function StopTime() {
     clearInterval(interval);
     let latestTime = time;
     let record = latestTime.innerText;
-    const playerName = prompt("あなたの名前を入力してください：");
-    if(playerName===null){
+    let playerName = prompt("あなたの名前を入力してください");
+
+    if(playerName==null||playerName==""){
         console.log("名前が打たれてないのでアラートを出す")
-        confirm("名前を入力しないでよろしいですか?");
+        const confirm_ju=confirm("名前を入力しないでよろしいですか?");
+
+        if(confirm_ju){
+            playerName="ゲスト"
+        
+    }else{
+        playerName=prompt("再度名前を入力してください")
     }
+}
+
+    
     console.log(`名前: ${playerName} レコード: ${record}`);
 
     axios.post("submit-result",{ playerName, record })
@@ -111,7 +121,7 @@ function StopTime() {
     time.remove();
 
     end.innerHTML = '<a href="/">終了</a>';
-    once.innerHTML='<a href="/touch">もう一度行う</a>'
+    once.innerHTML='<a href="/game">もう一度行う</a>'
     score.innerHTML = `${playerName}さんのスコアは<br>${record}です!`
 
 
