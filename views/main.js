@@ -31,13 +31,13 @@ function handleButtonClick(button) {
     // 期待される順番と比較
     if (clickedNumber === expectedOrder[0]) {
         // 正しい順番でクリックされた場合
-        console.log("正しい順番です");
+        
         // 期待される順番から削除
         expectedOrder.shift();
         
         // ゲームの終了判定
         if (expectedOrder.length === 0) {
-            console.log("ゲームクリア！");
+           
             StopTime();
         }
         button.innerHTML = "" // ボタンのテキストを空にする
@@ -90,6 +90,10 @@ function StopTime() {
     let latestTime = time;
     let record = latestTime.innerText;
     const playerName = prompt("あなたの名前を入力してください：");
+    if(playerName===null){
+        console.log("名前が打たれてないのでアラートを出す")
+        confirm("名前を入力しないでよろしいですか?");
+    }
     console.log(`名前: ${playerName} レコード: ${record}`);
 
     axios.post("submit-result",{ playerName, record })
@@ -132,28 +136,11 @@ function gameStart() {
 const burger = document.querySelector(".burger");
 const nav = document.querySelector(".nav-links");
 const navLinks = document.querySelectorAll(".nav-links li");
-const navheader = document.querySelector(".nav-header");
+const navheader = document.querySelector('.nav-header');
+const navOffsetTop = navheader.offsetTop;
 
 
-burger.addEventListener("click", () => {
-    console.log("クラスを付与します");
-    nav.classList.toggle("nav-active");
 
-    navLinks.forEach((link, index) => {
-        if (link.style.animation) {
-            link.style.animation = "";
-        } else {
-            link.style.animation = `navLinksFade 1.5s ease forwards ${index / 4}s`;
-        }
-    });
-    burger.classList.toggle("toggle")
-});
-
-window.addEventListener('scroll', () => {
-    console.log(1)
-    if(window.pageYOffset >= navheader.offsetTop){
-        navheader.classList.add("sticky");
-    }else{
-        navheader.classList.remove("sticky");
-    }
-});
+$('#goto_page_top').click(function() {
+    $( 'html,body' ).animate( {scrollTop:0}, 'slow' );
+  });

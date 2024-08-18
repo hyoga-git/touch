@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+   
 }
 
 h2 {
@@ -31,8 +32,15 @@ header nav {
     align-items: center;
     min-height: 8vh;
     width: 100%;
-    z-index: 1000; /* 修正: ナビゲーションバーが背景に隠れないようにz-indexを追加 */
-    position: relative; /* 追加: z-indexを機能させるためのposition */
+    z-index: 1000; 
+    position: relative; 
+}
+.nav-header {
+    position: sticky;
+    top: 0;
+    left:100%;
+
+    z-index: 1000;
 }
 
 .logo {
@@ -86,6 +94,26 @@ li > a {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
+#goto_page_top {
+    /* ボタンのデザイン */
+    background: #ffffff;
+    padding: 10px;
+    font-size:15px;
+    text-align: center;
+    font-weight: bold;
+    border:1px dashed black;
+    border-radius: 40px;;
+   
+    
+    /* ボタン上にカーソルを持ってきた時に、カーソルの形を変える */
+    cursor: pointer;
+    
+    /* ボタン位置 */
+    position: fixed;
+    right:3%;
+    bottom:3%;
+    }
+
 /* ---------------------------------------- */
 
 /* game-detail-container */
@@ -123,6 +151,7 @@ li > a {
     margin: auto 40px;
     width: 20%;
 }
+/* home.ejs終了 */
 
 /* game.html開始 */
 .game-table {
@@ -192,6 +221,7 @@ li > a {
     margin: 10px 0;
 }
 
+/* game.ejs終了 */
 /* ranking-container */
 .ranking {
     max-width: 800px;
@@ -221,7 +251,7 @@ li > a {
     font-size: 1.2rem;
     color: #666;
   }
-  /* ranking-container-終了 */
+  /* ranking.ejs終了終了 */
 
 /* メディアクエリ開始 */
 @media screen and (max-width: 1024px) {
@@ -239,6 +269,7 @@ li > a {
 
     /* ハンバーガーメニュー */
    
+    
 
     /* game-detail-container */
     .game-detail{

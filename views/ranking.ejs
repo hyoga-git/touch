@@ -22,20 +22,16 @@
                     </ul>
                 
                 
-                <div class="burger">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-        </nav>
-        
+             
+               
+        </nav> 
        
-    
     </header>
     <main>
+        <div id="goto_page_top">TOPへ</div>
     <div class="ranking">
-        <h2>ランキング一覧</h2>
-    <% for (let i = 0; i < Math.min(touch.length,10000000); i++) { %>
+      <h2>ランキング一覧TOP20</h2>
+    <% for (let i = 0; i < Math.min(touch.length,20); i++) { %>
         <% const rank = touch[i]; %>
         <div class="ranking">
             <span class="border"><%= i + 1 %>位</span>
@@ -44,7 +40,10 @@
         </div>
             <% } %>
         </main>
-</body>
+        
+      
+       
+
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
 <!-- slickのJavaScript -->
