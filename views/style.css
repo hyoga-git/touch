@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
    
 }
 
@@ -193,14 +194,19 @@ li > a {
     justify-content: center;
     align-items: center;
     margin: 10px 0;
+    padding:40px;
 }
 
 .startGame {
-    border: 1px solid black;
-    height: 30px;
+    border-radius: 50px;
+    padding:20px;
+    height: 80px;
+    width:clamp(11.25rem, 8.602rem + 5.85vw, 15.625rem);
     font-size: 1rem;
     background-color: #fff;
     cursor: pointer;
+    background-color: #333333;
+    color:#ffffff;
 }
 
 .score {
@@ -219,6 +225,26 @@ li > a {
 
 .link-container div {
     margin: 10px 0;
+}
+.game_end_area{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin:50px auto;
+    gap:50px;
+
+}
+.game_end_area a div{
+    border:1px solid black;
+    border-radius: 50px;
+    padding:20px;
+    width:250px;
+    text-align: center;
+    background-color: #333333;
+    color:#ffffff;
+}
+.game_end_area a{
+    text-decoration: none;
 }
 
 /* game.ejs終了 */
@@ -302,7 +328,6 @@ li > a {
     }
 
     .startGame {
-        width: 150px;
         font-size: 0.9rem;
     }
 
@@ -337,10 +362,7 @@ li > a {
         height: 60px;
     }
 
-    .startGame {
-        width: 120px;
-        font-size: 0.8rem;
-    }
+ 
 
     .score {
         font-size: 1.2rem;

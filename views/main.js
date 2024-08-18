@@ -122,9 +122,11 @@ function StopTime() {
     table.remove();
     time.remove();
 
-    end.innerHTML = '<a href="/">終了</a>';
-    once.innerHTML='<a href="/game">もう一度行う</a>'
-    score.innerHTML = `${playerName}さんのスコアは<br>${record}です!`
+    end.innerHTML='<a href="/"><div class="end">終了</div></a>';
+    once.innerHTML='<a href="/game"><div class="once">もう一度行う</div></a>'
+    score.innerHTML = `${playerName}さんのスコアは<br>${record}です!
+    <br>
+    `
 
 
 
